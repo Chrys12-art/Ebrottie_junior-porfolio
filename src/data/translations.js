@@ -6,7 +6,12 @@ export const translations = {
     meta: {
       title: 'Ebrottie Chrys Junior — Étudiant MIAGE · Data & Développement',
       description:
-        "Portfolio de Ebrottie Chrys Junior, étudiant en Licence 3 MIAGE à Abidjan : développement web et mobile, bases de données, analyse de données et systèmes d'information.",
+        "Portfolio d'Ebrottie Chrys Junior, étudiant en Licence 3 MIAGE à Abidjan : développement web et mobile, bases de données, analyse de données et systèmes d'information.",
+    },
+    preloader: {
+      label: 'Chargement',
+      hint: 'Préparation de la visite',
+      ready: 'Bienvenue',
     },
     nav: {
       home: 'Accueil',
@@ -24,24 +29,25 @@ export const translations = {
       main: 'Navigation principale',
     },
     hero: {
-      role: 'Étudiant MIAGE · Data & Développement',
+      role: 'Étudiant Licence 3 MIAGE · Développement & données',
       tagline:
-        "Je conçois des solutions numériques et j'explore la donnée pour transformer les idées en projets utiles.",
+        "Développeur web et mobile en formation, je travaille sur des applications, des bases de données et l'analyse de données.",
       intro:
-        "Étudiant en Licence 3 MIAGE à Abidjan, j'apprends en construisant : applications web, bases de données et analyse de données, avec une approche à la fois technique et orientée métier.",
-      ctaProjects: 'Découvrir mes projets',
+        "Étudiant en Licence 3 MIAGE à Abidjan, j'apprends en réalisant des projets concrets : applications web, bases de données et systèmes d'information.",
+      ctaProjects: 'Voir mes projets',
       ctaContact: 'Me contacter',
       cv: 'Télécharger mon CV',
       github: 'GitHub',
       location: "Abidjan, Côte d'Ivoire",
-      availability: 'Ouvert aux échanges et collaborations',
+      availability: 'Développement web & mobile · Données',
       portraitAlt: 'Portrait de Ebrottie Chrys Junior',
       scroll: 'Défiler',
       badgeLabel: 'Licence 3 MIAGE',
     },
     about: {
       eyebrow: 'À propos',
-      title: 'Entre logique, données et créativité.',
+      factsTitle: 'Repères',
+      title: 'Un profil développement & données.',
       paragraphs: [
         "Je suis étudiant en Licence 3 MIAGE à l'Université Polytechnique de Bingerville (UPB), en Côte d'Ivoire.",
         "Passionné par les technologies informatiques, je m'intéresse particulièrement à la conception de solutions numériques, au développement d'applications et à l'analyse de données.",
@@ -74,7 +80,7 @@ export const translations = {
     },
     skills: {
       eyebrow: 'Compétences',
-      title: 'Une base technique, construite par la pratique.',
+      title: 'Compétences techniques',
       subtitle:
         'Des compétences réparties par domaine, présentées sans pourcentages : ce que je pratique, et ce que je suis encore en train d\'apprendre.',
       categories: {
@@ -97,12 +103,12 @@ export const translations = {
       inProgress: {
         title: "En cours d'apprentissage",
         desc: 'Ce que je développe activement en ce moment.',
-        items: ['Java', 'Spring Boot', 'Administration système'],
+        items: ['Spring Boot', 'Administration système'],
       },
     },
     projects: {
       eyebrow: 'Projets',
-      title: 'Des idées transformées en réalisations.',
+      title: 'Projets réalisés',
       subtitle:
         'Projets personnels et travaux académiques. Chaque carte précise le problème visé, les fonctionnalités développées et les technologies utilisées.',
       problem: 'Problème adressé',
@@ -202,18 +208,6 @@ export const translations = {
           ],
           note: 'Projet en cours : les fonctionnalités et technologies affichées sont celles prévues.',
         },
-        kmeans: {
-          type: "Projet d'analyse de données",
-          name: 'Segmentation client par K-Means',
-          description:
-            "Segmentation d'une clientèle par clustering K-Means : préparation d'un jeu de données client sous Python, puis analyse des données.",
-          problem: 'Regrouper des clients aux profils proches pour mieux comprendre une clientèle.',
-          features: [
-            'Nettoyage et préparation du dataset client sous Python',
-            'Analyse de données',
-            'Segmentation par clustering K-Means',
-          ],
-        },
         oracle: {
           type: 'Travaux pratiques académiques',
           name: 'Administration de bases de données Oracle',
@@ -235,7 +229,7 @@ export const translations = {
     },
     experience: {
       eyebrow: 'Expérience',
-      title: 'Des immersions en entreprise.',
+      title: 'Expériences professionnelles',
       items: [
         {
           id: 'genius',
@@ -267,7 +261,7 @@ export const translations = {
     },
     education: {
       eyebrow: 'Formation',
-      title: 'Un cursus entre informatique et gestion.',
+      title: 'Formation',
       school: 'Université Polytechnique de Bingerville (UPB)',
       degree: 'Licence 3 MIAGE',
       full: "Méthodes Informatiques Appliquées à la Gestion des Entreprises",
@@ -293,7 +287,7 @@ export const translations = {
     },
     goals: {
       eyebrow: 'Objectifs',
-      title: 'Une direction claire, une progression pas à pas.',
+      title: 'Objectifs professionnels',
       intro:
         "Mon objectif est de poursuivre mes études et de construire une carrière dans la technologie et la donnée, avec une ouverture vers les organisations internationales.",
       items: [
@@ -323,9 +317,27 @@ export const translations = {
       formFallback: "Le formulaire ne s'affiche pas ? ",
       formOpen: 'Ouvrez-le dans un nouvel onglet',
     },
+    mascot: {
+      name: 'Pix',
+      role: 'Votre guide de visite',
+      hide: 'Masquer la mascotte',
+      show: 'Réafficher la mascotte',
+      close: 'Fermer la bulle',
+      welcome: 'Salut ! Je vous accompagne pendant la visite.',
+      sections: {
+        home: 'Bienvenue ! Prenez votre temps.',
+        about: 'Un peu plus sur mon parcours.',
+        skills: 'Voici mes compétences principales.',
+        projects: 'Place aux projets concrets.',
+        experience: 'Mes expériences en entreprise.',
+        education: 'Ma formation en MIAGE.',
+        goals: 'Mes objectifs professionnels.',
+        contact: 'Une question ? Écrivez-moi !',
+      },
+    },
     footer: {
       rights: 'Tous droits réservés.',
-      built: 'Conçu et développé avec React & Motion.',
+      built: '',
       top: 'Retour en haut',
     },
   },
@@ -335,6 +347,11 @@ export const translations = {
       title: 'Ebrottie Chrys Junior — MIAGE Student · Data & Development',
       description:
         'Portfolio of Ebrottie Chrys Junior, a third-year MIAGE student in Abidjan: web and mobile development, databases, data analysis and information systems.',
+    },
+    preloader: {
+      label: 'Loading',
+      hint: 'Getting the tour ready',
+      ready: 'Welcome',
     },
     nav: {
       home: 'Home',
@@ -352,23 +369,24 @@ export const translations = {
       main: 'Main navigation',
     },
     hero: {
-      role: 'MIAGE Student · Data & Development',
-      tagline: 'I build digital solutions and explore data to turn ideas into useful projects.',
+      role: 'Third-year MIAGE student · Development & data',
+      tagline: 'Web and mobile developer in training, working on applications, databases and data analysis.',
       intro:
-        'A third-year MIAGE student in Abidjan, I learn by building: web applications, databases and data analysis, with an approach that is both technical and business-minded.',
-      ctaProjects: 'Explore my projects',
+        'A third-year MIAGE student in Abidjan, I learn by building concrete projects: web applications, databases and information systems.',
+      ctaProjects: 'View my projects',
       ctaContact: 'Get in touch',
       cv: 'Download my CV',
       github: 'GitHub',
       location: 'Abidjan, Côte d’Ivoire',
-      availability: 'Open to conversations and collaboration',
+      availability: 'Web & mobile development · Data',
       portraitAlt: 'Portrait of Ebrottie Chrys Junior',
       scroll: 'Scroll',
       badgeLabel: 'Third-year MIAGE',
     },
     about: {
       eyebrow: 'About',
-      title: 'Between logic, data and creativity.',
+      factsTitle: 'At a glance',
+      title: 'A development & data profile.',
       paragraphs: [
         'I am a third-year MIAGE student at the Polytechnic University of Bingerville (UPB), in Côte d’Ivoire.',
         'Passionate about computing technologies, I am especially interested in designing digital solutions, developing applications and analysing data.',
@@ -401,7 +419,7 @@ export const translations = {
     },
     skills: {
       eyebrow: 'Skills',
-      title: 'A technical foundation, built through practice.',
+      title: 'Technical skills',
       subtitle:
         'Skills grouped by domain and shown without percentages: what I practise, and what I am still learning.',
       categories: {
@@ -424,12 +442,12 @@ export const translations = {
       inProgress: {
         title: 'Currently learning',
         desc: 'What I am actively developing right now.',
-        items: ['Java', 'Spring Boot', 'System administration'],
+        items: ['Spring Boot', 'System administration'],
       },
     },
     projects: {
       eyebrow: 'Projects',
-      title: 'Ideas turned into real work.',
+      title: 'Selected projects',
       subtitle:
         'Personal projects and academic work. Each card states the problem addressed, the features built and the technologies used.',
       problem: 'Problem addressed',
@@ -529,18 +547,6 @@ export const translations = {
           ],
           note: 'Work in progress: features and technologies shown are the planned ones.',
         },
-        kmeans: {
-          type: 'Data analysis project',
-          name: 'Customer segmentation with K-Means',
-          description:
-            'Customer segmentation using K-Means clustering: preparing a customer dataset in Python, then analysing the data.',
-          problem: 'Group customers with similar profiles to better understand a customer base.',
-          features: [
-            'Cleaning and preparing the customer dataset in Python',
-            'Data analysis',
-            'Segmentation with K-Means clustering',
-          ],
-        },
         oracle: {
           type: 'Academic lab work',
           name: 'Oracle Database Administration',
@@ -562,7 +568,7 @@ export const translations = {
     },
     experience: {
       eyebrow: 'Experience',
-      title: 'Hands-on experience in companies.',
+      title: 'Professional experience',
       items: [
         {
           id: 'genius',
@@ -594,7 +600,7 @@ export const translations = {
     },
     education: {
       eyebrow: 'Education',
-      title: 'A programme between computing and management.',
+      title: 'Education',
       school: 'Polytechnic University of Bingerville (UPB)',
       degree: 'Third-year MIAGE (Licence 3)',
       full: 'Applied Computer Science Methods for Business Management',
@@ -620,7 +626,7 @@ export const translations = {
     },
     goals: {
       eyebrow: 'Goals',
-      title: 'A clear direction, one step at a time.',
+      title: 'Career goals',
       intro:
         'My goal is to continue my studies and build a career in technology and data, with an openness to international organisations.',
       items: [
@@ -650,9 +656,27 @@ export const translations = {
       formFallback: 'The form does not show up? ',
       formOpen: 'Open it in a new tab',
     },
+    mascot: {
+      name: 'Pix',
+      role: 'Your tour guide',
+      hide: 'Hide the mascot',
+      show: 'Show the mascot again',
+      close: 'Close the bubble',
+      welcome: 'Hi! I’ll be with you during the tour.',
+      sections: {
+        home: 'Welcome! Take your time.',
+        about: 'A little more about my background.',
+        skills: 'Here are my main skills.',
+        projects: 'Now for the real projects.',
+        experience: 'My hands-on experience.',
+        education: 'My MIAGE degree.',
+        goals: 'My career goals.',
+        contact: 'Any question? Drop me a line!',
+      },
+    },
     footer: {
       rights: 'All rights reserved.',
-      built: 'Designed and built with React & Motion.',
+      built: '',
       top: 'Back to top',
     },
   },

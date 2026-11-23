@@ -36,6 +36,14 @@ export function LangProvider({ children }) {
     document.title = t.meta.title
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content', t.meta.description)
+
+    // Les réseaux sociaux doivent voir la même langue que le visiteur.
+    const ogTitle = document.querySelector('meta[property="og:title"]')
+    if (ogTitle) ogTitle.setAttribute('content', t.meta.title)
+    const ogDescription = document.querySelector('meta[property="og:description"]')
+    if (ogDescription) ogDescription.setAttribute('content', t.meta.description)
+    const ogLocale = document.querySelector('meta[property="og:locale"]')
+    if (ogLocale) ogLocale.setAttribute('content', lang === 'fr' ? 'fr_FR' : 'en_US')
   }, [lang])
 
   const value = useMemo(() => ({ lang, setLang, t: translations[lang] }), [lang, setLang])

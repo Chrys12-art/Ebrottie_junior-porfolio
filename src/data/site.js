@@ -13,9 +13,7 @@ export const site = {
 
   github: 'https://github.com/Chrys12-art',
 
-  // LinkedIn : colle ici l'URL complète de ton profil (https://www.linkedin.com/in/...).
-  // Tant que c'est vide, aucun bouton LinkedIn n'est affiché (pas de faux lien).
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/junior-%C3%A9brotti%C3%A9-695364356/',
 
   // Portrait : fichier dans /public (remplace-le pour changer la photo).
   portrait: '/junior-portrait.jpg',

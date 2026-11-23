@@ -1,9 +1,6 @@
-import { Compass, GraduationCap, Languages, MapPin, Palette, Sparkles, Target, Zap } from 'lucide-react'
 import { useLang } from '../hooks/useLang'
 import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
-
-const FACT_ICONS = [GraduationCap, MapPin, Compass, Languages]
 
 export default function About() {
   const { t } = useLang()
@@ -17,81 +14,49 @@ export default function About() {
         <div className="about">
           <div className="about__text">
             {a.paragraphs.map((p, i) => (
-              <Reveal as="p" key={i} delay={i * 0.06} className={i === 0 ? 'lead' : ''}>
+              <Reveal as="p" key={i} delay={i * 0.04} className={i === 0 ? 'lead' : ''}>
                 {p}
               </Reveal>
             ))}
           </div>
 
           <div className="about__side">
-            <Reveal className="glass facts" delay={0.1}>
-              <ul>
-                {a.facts.map((f, i) => {
-                  const Icon = FACT_ICONS[i]
-                  return (
-                    <li key={f.label}>
-                      <span className="facts__icon" aria-hidden="true">
-                        <Icon size={18} />
-                      </span>
-                      <span>
-                        <span className="facts__label">{f.label}</span>
-                        <span className="facts__value">{f.value}</span>
-                      </span>
-                    </li>
-                  )
-                })}
-              </ul>
+            <Reveal className="panel panel--pad">
+              <h3>{a.factsTitle || a.eyebrow}</h3>
+              <dl className="facts">
+                {a.facts.map((f) => (
+                  <div key={f.label}>
+                    <dt>{f.label}</dt>
+                    <dd>{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
             </Reveal>
 
-            <Reveal className="glass interests" delay={0.2}>
-              <h3>
-                <Sparkles size={18} aria-hidden="true" />
-                {a.interestsTitle}
-              </h3>
-              <ul className="chips">
+            <Reveal className="panel panel--pad" delay={0.08}>
+              <h3>{a.interestsTitle}</h3>
+              <ul className="text-list">
                 {a.interests.map((i) => (
-                  <li key={i} className="chip">
-                    {i}
-                  </li>
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
-              <h3 className="interests__sub">
-                <Target size={18} aria-hidden="true" />
-                {a.ambitionsTitle}
-              </h3>
+
+              <h3 className="panel__sub">{a.ambitionsTitle}</h3>
               <p className="muted">{a.ambitionsText}</p>
 
-              {a.qualities && (
-                <>
-                  <h3 className="interests__sub">
-                    <Zap size={18} aria-hidden="true" />
-                    {a.qualitiesTitle}
-                  </h3>
-                  <ul className="chips">
-                    {a.qualities.map((q) => (
-                      <li key={q} className="chip chip--dashed">
-                        {q}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
+              <h3 className="panel__sub">{a.qualitiesTitle}</h3>
+              <ul className="text-list">
+                {a.qualities.map((q) => (
+                  <li key={q}>{q}</li>
+                ))}
+              </ul>
 
-              {a.personal && (
-                <>
-                  <h3 className="interests__sub">
-                    <Palette size={18} aria-hidden="true" />
-                    {a.personalTitle}
-                  </h3>
-                  <ul className="chips">
-                    {a.personal.map((p) => (
-                      <li key={p} className="chip">
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
+              <h3 className="panel__sub">{a.personalTitle}</h3>
+              <ul className="text-list">
+                {a.personal.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
             </Reveal>
           </div>
         </div>

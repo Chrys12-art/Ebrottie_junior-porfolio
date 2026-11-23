@@ -1,10 +1,6 @@
-import { motion } from 'motion/react'
-import { BarChart3, Boxes, Code2, Globe2, Network, Rocket } from 'lucide-react'
 import { useLang } from '../hooks/useLang'
 import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
-
-const ICONS = [BarChart3, Boxes, Code2, Network, Rocket, Globe2]
 
 export default function Goals() {
   const { t } = useLang()
@@ -16,32 +12,15 @@ export default function Goals() {
         <SectionHeader eyebrow={g.eyebrow} title={g.title} subtitle={g.intro} id="goals-title" />
 
         <ul className="goals">
-          {g.items.map((item, i) => {
-            const Icon = ICONS[i]
-            return (
-              <motion.li
-                key={item.title}
-                className="glass goal"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -4 }}
-              >
-                <span className="icon-badge icon-badge--sm" aria-hidden="true">
-                  <Icon size={18} />
-                </span>
-                <h3>{item.title}</h3>
-                <p className="muted">{item.desc}</p>
-              </motion.li>
-            )
-          })}
+          {g.items.map((item, i) => (
+            <Reveal as="li" key={item.title} className="goal" delay={(i % 3) * 0.06}>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </Reveal>
+          ))}
         </ul>
 
-        <Reveal className="goals__closing">
-          <Globe2 size={18} aria-hidden="true" />
-          <p>{g.closing}</p>
-        </Reveal>
+        <Reveal className="goals__closing">{g.closing}</Reveal>
       </div>
     </section>
   )

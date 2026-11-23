@@ -44,7 +44,7 @@ export const projects = [
     id: 'nounouconnect',
     icon: 'Baby',
     accent: 'violet',
-    tech: ['React', 'Vite', 'Supabase', 'PostgreSQL'],
+    tech: ['React', 'Vite', 'PostgreSQL'],
     github: '', // À COMPLÉTER si le dépôt est public
     demo: '',
   },
@@ -55,14 +55,6 @@ export const projects = [
     status: 'wip', // affiche l'étiquette « En cours »
     tech: ['React', 'Spring Boot', 'PostgreSQL'], // technologies prévues
     github: '',
-    demo: '',
-  },
-  {
-    id: 'kmeans',
-    icon: 'BarChart3',
-    accent: 'cyan',
-    tech: ['Python', 'Excel', 'K-Means'],
-    github: '', // À COMPLÉTER si le notebook / dépôt est public
     demo: '',
   },
   {

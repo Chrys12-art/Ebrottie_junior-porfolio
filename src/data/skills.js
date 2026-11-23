@@ -11,7 +11,7 @@ export const skillCategories = [
     accent: 'blue',
     items: [
       { name: 'Python' },
-      { name: 'Java', level: 'learning' },
+      { name: 'Java' },
       { name: 'C' },
       { name: 'JavaScript' },
       { name: 'HTML' },

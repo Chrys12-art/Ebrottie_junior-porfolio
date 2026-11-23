@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react'
 import { MotionConfig } from 'motion/react'
 import { LangProvider, useLang } from './hooks/useLang'
 import Navbar from './components/Navbar'
@@ -10,18 +11,24 @@ import Education from './components/Education'
 import Goals from './components/Goals'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Background from './components/Background'
+import Mascot from './components/Mascot'
+import Preloader from './components/Preloader'
+import ScrollProgress from './components/ScrollProgress'
 
 function Page() {
   const { t } = useLang()
+  const [loading, setLoading] = useState(true)
+  const finishLoading = useCallback(() => setLoading(false), [])
+
   return (
     <>
+      {loading && <Preloader onDone={finishLoading} />}
+      <ScrollProgress />
       <a className="skip-link" href="#main">
         {t.nav.skip}
       </a>
-      <Background />
       <Navbar />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <Hero />
         <About />
         <Skills />
@@ -32,13 +39,13 @@ function Page() {
         <Contact />
       </main>
       <Footer />
+      <Mascot />
     </>
   )
 }
 
 export default function App() {
   return (
-    // reducedMotion="user" : Motion respecte prefers-reduced-motion automatiquement.
     <MotionConfig reducedMotion="user">
       <LangProvider>
         <Page />
